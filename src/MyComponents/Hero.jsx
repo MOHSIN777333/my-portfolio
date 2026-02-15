@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import heroImage from "../assets/heroPic.png";
+
 function Hero() {
   return (
     <section
@@ -9,16 +12,17 @@ function Hero() {
           {/* Left Side - Text */}
           <div className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight dark:text-white">
-              Build Modern{" "}
+              Build Modern
               <span className="text-indigo-600 dark:text-emerald-600">
-                Web Apps
+                Web Applications
               </span>{" "}
-              Easily
+              with Confidence
             </h1>
 
             <p className="mt-6 text-lg text-gray-600 dark:text-white/30">
-              Create fast, responsive and scalable applications using React and
-              Tailwind CSS. Start building your next project today.
+              Create fast, responsive, and scalable full-stack applications
+              using the MERN stack. I craft powerful backend systems and
+              stunning frontend experiences that help businesses grow.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -26,13 +30,13 @@ function Hero() {
                 className="dark:bg-emerald-800 dark:hover:bg-emerald-900
               bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition"
               >
-                Get Started
+                <Link to={"/"}> Get Started</Link>
               </button>
               <button
                 className="dark:border-emerald-600 dark:text-emerald-600 dark:hover:bg-emerald-400/30 dark:hover:text-white/30
               border border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-50 transition"
               >
-                Learn More
+                <Link to={"/about"}>Learn More</Link>
               </button>
             </div>
           </div>
@@ -40,7 +44,7 @@ function Hero() {
           {/* Right Side - Image */}
           <div className="lg:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+              src={heroImage}
               alt="Hero"
               className="w-full rounded-xl shadow-lg"
             />

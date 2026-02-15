@@ -1,3 +1,8 @@
+import { GitBranchIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import gitPic from "../assets/gitPic.png";
+import linkdinPic from "../assets/linkdinPic.png";
+
 function Footer() {
   return (
     <footer
@@ -23,27 +28,33 @@ function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a href="#home" className="hover:text-indigo-400 transition">
+                <Link to={"/"} className="hover:text-indigo-400 transition">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-indigo-400 transition">
+                <Link
+                  to={"/about"}
+                  className="hover:text-indigo-400 transition"
+                >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#projects"
+                <Link
+                  to={"/projects"}
                   className="hover:text-indigo-400 transition"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-indigo-400 transition">
+                <Link
+                  to={"/contact"}
+                  className="hover:text-indigo-400 transition"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -53,22 +64,22 @@ function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://github.com/MOHSIN777333"
                 className="bg-gray-800 p-3 rounded-full hover:bg-indigo-600 transition"
               >
-                🌐
+                <img width={"50"} height={"30"} src={gitPic} alt="github" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mohsin-ali-613737399/"
                 className="bg-gray-800 p-3 rounded-full hover:bg-indigo-600 transition"
               >
-                💼
-              </a>
-              <a
-                href="#"
-                className="bg-gray-800 p-3 rounded-full hover:bg-indigo-600 transition"
-              >
-                🐙
+                <img
+                  className="rounded-full"
+                  width={"50"}
+                  height={"30"}
+                  src={linkdinPic}
+                  alt="linkdin"
+                />
               </a>
             </div>
           </div>
